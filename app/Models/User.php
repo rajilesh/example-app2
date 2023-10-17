@@ -25,6 +25,9 @@ class User extends Authenticatable implements Syncable
      * @var array<int, string>
      */
     protected $fillable = [
+        'name',
+        'email',
+        'password',
     ];
 
     /**
