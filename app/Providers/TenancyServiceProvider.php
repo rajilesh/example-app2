@@ -103,6 +103,8 @@ class TenancyServiceProvider extends ServiceProvider
         $this->mapRoutes();
 
         $this->makeTenancyMiddlewareHighestPriority();
+
+        \Stancl\Tenancy\Listeners\UpdateSyncedResource::$shouldQueue = true;
     }
 
     protected function bootEvents()
